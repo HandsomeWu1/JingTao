@@ -98,11 +98,12 @@ export function clearStrComma(str) {
  */
 export function isLogin(val) {
   let userInfo = storage.getUserInfo();
-  if (val == "auth") {
-    return userInfo.id ? true : false;
-  } else {
-    return storage.getUserInfo();
-  }
+  // if (val == "auth") {
+  //   return userInfo.id ? true : false;
+  // } else {
+  //   return storage.getUserInfo();
+  // }
+  return true;
 }
 
 /**

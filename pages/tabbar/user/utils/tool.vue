@@ -19,7 +19,7 @@
           </view>
           <view class="interact-item" @click="navigateTo('/pages/mine/myCollect')">
             <image src="/static/mine/myfavorite.png" mode=""></image>
-            <view>我的关注</view>
+            <view>我的收藏</view>
           </view>
           <view class="interact-item" @click="navigateTo('/pages/mine/myTracks')">
             <image src="/static/mine/myhistory.png" mode=""></image>
@@ -52,7 +52,7 @@
           </view>
           <view class="interact-item" @click="distribution">
             <image src="/static/mine/distribution.png" mode=""></image>
-            <view>我的分销</view>
+            <view>我的自提</view>
           </view>
         </view>
       </div>

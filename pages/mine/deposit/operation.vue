@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <u-navbar :custom-back="back" title="余额"></u-navbar>
+    <u-navbar :custom-back="back" title="餐卡"></u-navbar>
     <div class="box">
-      <div class="deposit">预存款金额</div>
+      <div class="deposit">餐卡余额</div>
       <div class="money">￥{{walletNum | unitPrice }}</div>
       <div class="operation-btns">
         <div class="operation-btn light" @click="navgition('/pages/mine/deposit/withdrawal')">提现</div>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="box list" @click="navgition('/pages/mine/deposit/index')">
-      <div class="list-left">预存款明细</div>
+      <div class="list-left">餐卡使用明细</div>
       <div class="list-right">
         <u-icon name="arrow-right"></u-icon>
       </div>
@@ -37,7 +37,7 @@ export default {
         title: "请先登录！",
       });
       uni.redirectTo({
-        // url: "/pages/passport/login",
+        url: "/pages/passport/login",
       });
     }
   },

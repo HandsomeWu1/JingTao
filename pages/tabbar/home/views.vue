@@ -4,7 +4,9 @@
     <div v-for="(item,index) in pageData.list" :key="index">
       <!-- 搜索栏，如果在楼层装修顶部则会自动浮动，否则不浮动 -->
       <u-navbar class="navbar" v-if="item.type == 'search'" :is-back="false" :is-fixed="index ===1 ? false : true">
-        <search style="width:100%" :res="item.options" />
+        
+		<image src="/static/img/mynav.png" @click="navigateTo('/pages/tabbar/category/category')" class="mynav"></image>
+		<search style="width:90%" :res="item.options" />
         <!-- #ifndef H5 -->
         <!-- 扫码功能 不兼容h5 详情文档: https://uniapp.dcloud.io/api/system/barcode?id=scancode -->
         <div slot="right" class="navbar-right">
@@ -104,6 +106,11 @@ export default {
   },
 
   methods: {
+	  navigateTo(url) {
+	    uni.switchTab({
+			url,
+	    })
+	  },
     /**
      * 实例化首页数据楼层
      */
@@ -205,5 +212,10 @@ export default {
 <style scoped lang="scss">
 .navbar-right {
   padding: 0 16rpx 0 0;
+}
+.mynav{
+	height: 32px;
+	width: 32px;
+	margin-left: 4px;
 }
 </style>

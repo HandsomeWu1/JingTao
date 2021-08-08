@@ -1,10 +1,10 @@
 <template>
   <view class="wap">
-    <u-navbar back-text="" title="预存款列表">
+    <u-navbar back-text="" title="餐卡使用明细">
     </u-navbar>
     <view class="wrapper-show-money">
       <view class="money-view">
-        <h3>预存款金额 </h3>
+        <h3>餐卡金额 </h3>
         <view class="money">￥{{walletNum | unitPrice }}</view>
 
       </view>

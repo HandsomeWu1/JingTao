@@ -33,7 +33,6 @@ export default {
     // 充值
     async handlerRecharge() {
       if (this.price > 0) {
-       
         let res = await recharge({ price: this.price });
         if (res.data.success) {
           uni.navigateTo({
